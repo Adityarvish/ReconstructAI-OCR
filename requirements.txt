@@ -1,0 +1,14 @@
+# Core
+numpy>=1.24
+opencv-python>=4.8
+python-dotenv>=1.0
+
+# Primary OCR engine (pulls in torch)
+easyocr>=1.7
+
+# Optional fallback OCR engine.
+# Also requires the Tesseract binary to be installed on your system:
+#   macOS:   brew install tesseract
+#   Ubuntu:  sudo apt-get install tesseract-ocr
+#   Windows: https://github.com/UB-Mannheim/tesseract/wiki
+pytesseract>=0.3.10

@@ -1,0 +1,105 @@
+
+import os
+
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+INPUT_DIR = os.path.join(PROJECT_ROOT, "input")
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, "output")
+
+
+DEFAULT_INPUT_IMAGE = os.path.join(INPUT_DIR, "sample_image.png")
+
+SELECTED_CROP_PATH = os.path.join(OUTPUT_DIR, "selected_crop.png")
+PROCESSED_CROP_PATH = os.path.join(OUTPUT_DIR, "processed_crop.png")
+RESULT_JSON_PATH = os.path.join(OUTPUT_DIR, "result.json")
+
+
+SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
+
+
+MIN_CROP_WIDTH = 8      
+MIN_CROP_HEIGHT = 8     
+
+
+BLUR_THRESHOLD = 100.0
+
+
+CONTRAST_THRESHOLD = 40.0
+
+
+LOW_RESOLUTION_PIXEL_AREA = 40 * 15  
+
+
+MIN_TEXT_HEIGHT_PX = 35
+VERY_SMALL_CROP_HEIGHT_PX = 18
+
+
+TARGET_UPSCALE_HEIGHT_PX = 64
+MAX_ADAPTIVE_UPSCALE_FACTOR = 8.0
+
+
+UPSCALE_FACTOR = 2.0                 
+UPSCALE_INTERPOLATION_SMALL = "CUBIC"     
+UPSCALE_INTERPOLATION_LARGE = "LANCZOS4"  
+
+
+CLAHE_CLIP_LIMIT = 2.0
+CLAHE_TILE_GRID_SIZE = (8, 8)
+
+
+SHARPEN_AMOUNT = 1.0
+
+
+MEDIAN_BLUR_KERNEL = 3
+
+
+GAUSSIAN_BLUR_KERNEL = (3, 3)
+
+
+MAX_DESKEW_ANGLE = 15.0
+
+
+ILLUMINATION_BLUR_KSIZE = 31
+
+
+ENABLE_DECONVOLUTION_CANDIDATES = True
+
+
+ENABLE_SUPER_RESOLUTION = True
+SR_SCALE_SMALL = 2   
+SR_SCALE_TINY = 4    
+
+
+ROI_PADDING_PIXELS = 6
+
+
+HIGH_CONFIDENCE_THRESHOLD = 0.90
+MEDIUM_CONFIDENCE_THRESHOLD = 0.70
+
+
+MIN_STRONG_RESULT_CHARS = 3
+
+
+OCR_LANGUAGES = ["en"]
+
+
+OCR_USE_GPU = "auto"
+
+
+ENABLE_TESSERACT_FALLBACK = True
+
+
+ENABLE_VLM_FALLBACK = True
+VLM_API_KEY_ENV = "OPENROUTER_API_KEY"
+
+
+VLM_MODEL = "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+
+
+VLM_MAX_TOKENS = 1500
+
+VLM_API_BASE_URL = "https://openrouter.ai/api/v1"
+
+
+LOG_LEVEL = "INFO"
